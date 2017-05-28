@@ -120,6 +120,16 @@
                         Mostrar en <b>negrita</b> si quitamos precio o cantidad en (MAQUETAR).
                      </label>
                   </div>
+                  <div class="form-group">
+                     <label class="checkbox-inline">
+                        {if="$fsc->factura_detallada_setup['f_detallada_marca_aguas']"}
+                        <input type="checkbox" name="marca_aguas" value="TRUE" checked=""/>
+                        {else}
+                        <input type="checkbox" name="marca_aguas" value="TRUE"/>
+                        {/if}
+                        Mostrar marca de aguas con logo.
+                     </label>
+                  </div>
                </div>
                <div class="col-sm-3">
                   {if="$fsc->factura_detallada_setup['f_detallada_color']=='personalizado'"}
