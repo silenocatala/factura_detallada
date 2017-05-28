@@ -69,7 +69,8 @@ class albaran_detallado extends fs_controller
                   'f_detallada_observaciones_producto' => FALSE,
                   'f_detallada_imprime_albaran' => FALSE,
                   'f_detallada_agrupa_albaranes' => FALSE,
-                  'f_detallada_maquetar_negrita' => FALSE
+                  'f_detallada_maquetar_negrita' => FALSE,
+                  'f_detallada_marca_aguas' => FALSE
               ),
               FALSE
       );
@@ -219,7 +220,8 @@ class albaran_detallado extends fs_controller
          $pdf_doc->fdf_verlogotipo = '1'; // 1/0 --> Mostrar Logotipo
          $pdf_doc->fdf_Xlogotipo = '15'; // Valor X para Logotipo
          $pdf_doc->fdf_Ylogotipo = '35'; // Valor Y para Logotipo
-         $pdf_doc->fdf_vermarcaagua = '1'; // 1/0 --> Mostrar Marca de Agua
+         // pdf_doc->fdf_vermarcaagua = '1'; // 1/0 --> Mostrar Marca de Agua
+  		   $pdf_doc->fdf_vermarcaagua = $this->impresion->f_detallada_marca_aguas;
          $pdf_doc->fdf_Xmarcaagua = '25'; // Valor X para Marca de Agua
          $pdf_doc->fdf_Ymarcaagua = '110'; // Valor Y para Marca de Agua
       }
