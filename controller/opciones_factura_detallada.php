@@ -76,7 +76,8 @@ class opciones_factura_detallada extends fs_controller
                'f_detallada_observaciones_producto' => FALSE,
                'f_detallada_imprime_albaran' => FALSE,
                'f_detallada_agrupa_albaranes' => FALSE,
-               'f_detallada_maquetar_negrita' => FALSE
+               'f_detallada_maquetar_negrita' => FALSE,
+               'f_detallada_marca_aguas' => TRUE			   
             ),
             FALSE
          );
@@ -100,6 +101,7 @@ class opciones_factura_detallada extends fs_controller
             $this->factura_detallada_setup['f_detallada_imprime_albaran'] = isset($_POST['imprime_albaran']);
             $this->factura_detallada_setup['f_detallada_agrupa_albaranes'] = isset($_POST['agrupa_albaran']);
             $this->factura_detallada_setup['f_detallada_maquetar_negrita'] = isset($_POST['maquetar_negrita']);
+            $this->factura_detallada_setup['f_detallada_marca_aguas'] = isset($_POST['marca_aguas']);
             
             if( $fsvar->array_save($this->factura_detallada_setup) )
             {
