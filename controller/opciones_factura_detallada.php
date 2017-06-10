@@ -77,7 +77,7 @@ class opciones_factura_detallada extends fs_controller
                'f_detallada_imprime_albaran' => FALSE,
                'f_detallada_agrupa_albaranes' => FALSE,
                'f_detallada_maquetar_negrita' => FALSE,
-               'f_detallada_marca_aguas' => TRUE			   
+               'f_detallada_marca_aguas' => FALSE			   
             ),
             FALSE
          );
