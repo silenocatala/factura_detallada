@@ -221,7 +221,14 @@ class albaran_detallado extends fs_controller
          $pdf_doc->fdf_Xlogotipo = '15'; // Valor X para Logotipo
          $pdf_doc->fdf_Ylogotipo = '35'; // Valor Y para Logotipo
          // pdf_doc->fdf_vermarcaagua = '1'; // 1/0 --> Mostrar Marca de Agua
-  		   $pdf_doc->fdf_vermarcaagua = $this->impresion->f_detallada_marca_aguas;
+		   if($this->impresion['f_detallada_marca_aguas'])
+		   {
+		      $pdf_doc->fdf_vermarcaagua = '1';
+		   }
+		   else
+		   {
+			   $pdf_doc->fdf_vermarcaagua = '0';
+		   }
          $pdf_doc->fdf_Xmarcaagua = '25'; // Valor X para Marca de Agua
          $pdf_doc->fdf_Ymarcaagua = '110'; // Valor Y para Marca de Agua
       }
